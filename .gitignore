@@ -1,0 +1,19 @@
+# PHP / XAMPP
+/vendor/
+*.log
+
+# Generated CSV exports (keep folder, ignore files)
+public/exports/*.csv
+public/exports/*.pdf
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Env / secrets
+.env
+config.local.php
