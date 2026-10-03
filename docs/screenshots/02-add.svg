@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720">
-  <rect width="1280" height="720" fill="#e6f4ea"/>
-  <rect x="40" y="40" width="1200" height="640" rx="16" fill="#ffffff" stroke="#b7d9c2" stroke-width="2"/>
-  <text x="640" y="330" font-family="Arial,sans-serif" font-size="56" font-weight="bold" fill="#1f5130" text-anchor="middle">Add Student</text>
-  <text x="640" y="390" font-family="Arial,sans-serif" font-size="24" fill="#4b7a5e" text-anchor="middle">Replace with a real screenshot of create.php</text>
-  <text x="640" y="430" font-family="Arial,sans-serif" font-size="20" fill="#8ab89b" text-anchor="middle">1280 × 720 recommended</text>
-</svg>

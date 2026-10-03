@@ -36,13 +36,11 @@ database.sql
 
 | Home | Add |
 |---|---|
-| ![Home](docs/screenshots/01-home.svg) | ![Add](docs/screenshots/02-add.svg) |
+| ![Home](docs/screenshots/01-home.png) | ![Add](docs/screenshots/02-add.png) |
 
-| View / Edit | Search + Export |
+| View | Edit |
 |---|---|
-| ![View](docs/screenshots/03-view-edit.svg) | ![Search](docs/screenshots/04-search-export.svg) |
-
-> Placeholders for now — swap in real screenshots with the same names.
+| ![View](docs/screenshots/03-view.png) | ![Edit](docs/screenshots/04-edit.png) |
 
 ## License
 
