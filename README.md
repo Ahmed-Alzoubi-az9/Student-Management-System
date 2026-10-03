@@ -34,13 +34,13 @@ database.sql
 
 ## Screenshots
 
-| Home | Add |
-|---|---|
-| ![Home](docs/screenshots/01-home.png) | ![Add](docs/screenshots/02-add.png) |
+| Home |
+|---|
+| ![Home](docs/screenshots/01-home.png) |
 
-| View | Edit |
+| Add | Edit |
 |---|---|
-| ![View](docs/screenshots/03-view.png) | ![Edit](docs/screenshots/04-edit.png) |
+| ![Add](docs/screenshots/02-add.png) | ![Edit](docs/screenshots/03-edit.png) |
 
 ## License
 
