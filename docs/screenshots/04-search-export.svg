@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720">
+  <rect width="1280" height="720" fill="#f1e8f5"/>
+  <rect x="40" y="40" width="1200" height="640" rx="16" fill="#ffffff" stroke="#c9aedd" stroke-width="2"/>
+  <text x="640" y="330" font-family="Arial,sans-serif" font-size="56" font-weight="bold" fill="#5b2a86" text-anchor="middle">Search + Export</text>
+  <text x="640" y="390" font-family="Arial,sans-serif" font-size="24" fill="#7f5aa3" text-anchor="middle">Replace with a real screenshot of search / CSV export</text>
+  <text x="640" y="430" font-family="Arial,sans-serif" font-size="20" fill="#ab8cc7" text-anchor="middle">1280 × 720 recommended</text>
+</svg>

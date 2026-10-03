@@ -1,12 +1,11 @@
-# Screenshots — TODO: replace placeholders
+# Screenshots
 
-These 4 PNGs are temporary solid-color placeholders generated locally
-(because this environment can't run your XAMPP browser).
+Placeholder images — replace the `.svg` files with real screenshots
+(keep the same names so the main README keeps working):
 
-Please replace with real captures:
-- `01-home.png` — `public/index.php` student table
-- `02-add.png` — `app/views/students/create.php`
-- `03-view-edit.png` — `show.php` / `edit.php`
-- `04-search-export.png` — search/filter + CSV export
+- `01-home.svg` → student table (`public/index.php`)
+- `02-add.svg` → add form (`create.php`)
+- `03-view-edit.svg` → view / edit pages
+- `04-search-export.svg` → search + CSV export
 
-Keep the same filenames so `README.md` keeps working.
+PNG or JPG also works, just update the paths in `README.md`.
