@@ -12,9 +12,9 @@ A simple PHP + MySQL web app for managing students records with full CRUD, live 
 
 ![Add Student](docs/screenshots/02-add.png)
 
-### Edit Student
+### Teachers
 
-![Edit Student](docs/screenshots/03-edit.png)
+![Teachers](docs/screenshots/03-teachers.png)
 
 ## Features
 

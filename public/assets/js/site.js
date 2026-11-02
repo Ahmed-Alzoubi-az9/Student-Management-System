@@ -17,6 +17,12 @@
     }
 
     function currentTheme() {
+        // explicit ?theme=light|dark in the URL wins (deep-linking / testing)
+        try {
+            var q = new URLSearchParams(window.location.search).get('theme');
+            if (q === 'dark' || q === 'light') { return q; }
+        } catch (e) {}
+
         var saved = null;
         try { saved = localStorage.getItem(STORAGE_KEY); } catch (e) {}
         if (saved !== 'dark' && saved !== 'light') {
