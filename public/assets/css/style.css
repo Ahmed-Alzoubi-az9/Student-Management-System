@@ -1,197 +1,308 @@
+/* =========================================================
+   Student Manager System — simple, clean theme
+   Flat colors, standard Bootstrap components, no gradients.
+   Dark mode works via Bootstrap 5.3 [data-bs-theme="dark"].
+   ========================================================= */
+
+/* ---------- Base ---------- */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    padding: 20px;
+    font-family: Arial, "Segoe UI", system-ui, sans-serif;
+    background-color: #f4f5f7;
+    color: #212529;
+    padding: 0 0 30px 0;
+    min-height: 100vh;
 }
+
+[data-bs-theme="dark"] body { background-color: #15171b; }
 
 .container {
     max-width: 1200px;
     margin: auto;
-    background: #fff;
-    padding: 20px;
+    background: #ffffff;
+    padding: 18px 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border: 1px solid #e0e2e6;
 }
 
+[data-bs-theme="dark"] .container {
+    background: #1e2126;
+    border-color: #2b2f36;
+}
 
 h1 {
     text-align: center;
-    color: #333;
+    font-size: 1.55rem;
+    font-weight: 700;
+    color: #212529;
+    margin: 6px 0 20px;
+}
+
+[data-bs-theme="dark"] h1 { color: #f1f3f5; }
+
+/* ---------- Navbar (simple) ---------- */
+.app-navbar {
+    background: #ffffff;
+    border-bottom: 1px solid #e0e2e6;
+    border-radius: 0;
+    box-shadow: none;
     margin-bottom: 20px;
 }
 
+.app-navbar .container { max-width: 1200px; border: none; box-shadow: none; background: transparent; padding-top: 4px; padding-bottom: 4px; }
+
+.app-navbar .app-brand {
+    color: #212529 !important;
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
+.app-navbar .app-nav-link {
+    color: #495057 !important;
+    font-weight: 500;
+    margin: 0 3px;
+}
+
+.app-navbar .app-nav-link:hover { color: #212529 !important; }
+
+.app-navbar .app-nav-link.active {
+    color: #212529 !important;
+    font-weight: 700;
+    border-bottom: 2px solid #495057;
+    border-radius: 0;
+}
+
+.app-navbar .navbar-toggler { border-color: #d3d6db; }
+
+.app-theme-toggle {
+    border: 1px solid #d3d6db !important;
+    color: #495057;
+    background: #ffffff;
+    border-radius: 50% !important;
+    width: 34px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app-theme-toggle:hover { background: #f1f3f5; }
+
+[data-bs-theme="dark"] .app-navbar { background: #1e2126; border-color: #2b2f36; }
+[data-bs-theme="dark"] .app-navbar .app-brand { color: #f1f3f5 !important; }
+[data-bs-theme="dark"] .app-navbar .app-nav-link { color: #adb5bd !important; }
+[data-bs-theme="dark"] .app-navbar .app-nav-link:hover,
+[data-bs-theme="dark"] .app-navbar .app-nav-link.active { color: #f1f3f5 !important; border-bottom-color: #dee2e6; }
+[data-bs-theme="dark"] .app-theme-toggle { background: #26292f; border-color: #3a3f46 !important; color: #dee2e6; }
+
+/* ---------- Tables ---------- */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
-table, th, td {
-    border: 1px solid #ddd;
+.table th, .table td {
+    padding: 10px 12px !important;
+    font-size: 0.925rem;
 }
 
-td.notes {
-    white-space: pre-wrap; 
+.table thead th {
+    background-color: #f1f3f5;
+    font-weight: 700;
+    border-bottom: 2px solid #ced4da !important;
 }
 
-th, td {
-    padding: 10px;
-    text-align: left;
+[data-bs-theme="dark"] .table thead th { background-color: #26292f; }
+
+/* label column on detail (view) pages */
+table.table tbody tr > th:first-child {
+    width: 230px;
+    background-color: #f8f9fa;
+    font-weight: 700;
 }
 
-th {
-    background-color: #f0f0f0;
+[data-bs-theme="dark"] table.table tbody tr > th:first-child { background-color: #26292f; }
+
+td.notes { white-space: pre-wrap; }
+
+/* ---------- Badges (neutral, plain) ---------- */
+.app-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background-color: #eef0f3;
+    color: #374151;
+    border: 1px solid #d5d9e0;
 }
 
-tr:nth-child(even) {
-    background-color: #f9f9f9;
+[data-bs-theme="dark"] .app-badge {
+    background-color: #26292f;
+    color: #cbd3dc;
+    border-color: #3a3f46;
 }
 
+/* ---------- Buttons (plain bootstrap-like) ---------- */
 a, button {
     border-radius: 5px;
     font-size: 0.9rem;
 }
 
-.action-buttons {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 15px;
-}
+a { text-decoration: none; }
 
-.btn-add {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 15px;
-}
+.btn { font-weight: 600; }
 
-.btn-add:hover { background-color: #239427; }
+.btn-add { background-color: #198754; color: white; padding: 9px 15px; border: none; }
+.btn-add:hover { background-color: #157347; color: #fff; }
 
-.btn-export {
-    background-color: #9C27B0;
-    color: white;
-    padding: 10px 15px;
-}
+.btn-export { background-color: #6c757d; color: white; padding: 9px 15px; }
+.btn-export:hover { background-color: #5a6268; color: #fff; }
 
-.btn-export:hover { background-color: #7B1FA2; }
+.btn-purple { background-color: #6c757d; color: white; }
+.btn-purple:hover { background-color: #5a6268; color: #fff; }
 
-.btn-edit { background-color: #2196F3; color: white; padding: 8px 12px; }
-.btn-edit:hover { background-color: #0a89f1; }
+.btn-edit { background-color: #0d6efd; color: white; padding: 7px 12px; }
+.btn-edit:hover { background-color: #0a58ca; }
 
-.btn-delete { background-color: #f44336; color: white; padding: 8px 12px; border: none; }
-.btn-delete:hover { background-color: #f7291a; }
+.btn-delete { background-color: #dc3545; color: white; padding: 7px 12px; border: none; }
+.btn-delete:hover { background-color: #b02a37; }
 
-.btn-view { background-color: #FF9800; color: white; padding: 8px 12px; }
-.btn-view:hover { background-color: #ec8e01; }
+.btn-view { background-color: #6c757d; color: white; padding: 7px 12px; }
+.btn-view:hover { background-color: #5a6268; }
 
-#create-student, #edit-student {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 80vh;
-}
+.btn-cancel { background-color: #6c757d; color: white; padding: 9px 14px; }
+.btn-cancel:hover { background-color: #5a6268; color: #fff; }
 
-#create-student form, #edit-student form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-    max-width: 400px;
-}
-
-#create-student input, #edit-student input,
-#create-student textarea, #edit-student textarea {
-    width: 100%;
-    padding: 8px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-}
+.btn-confirm { background-color: #dc3545; color: white; padding: 7px 12px; }
+.btn-confirm:hover { background-color: #b02a37; }
 
 a.btn-back {
     display: inline-block;
     margin-top: 15px;
-    background-color: #777;
+    background-color: #6c757d;
     color: white;
-    padding: 8px 12px;
+    padding: 8px 14px;
     text-decoration: none;
 }
 
+/* ---------- Forms ---------- */
+.form-control, .form-select {
+    background-color: #ffffff;
+    color: #212529;
+    border-color: #ced4da;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.18);
+    background-color: #ffffff;
+    color: #212529;
+}
+
+/* dark mode: dark inputs + clearly readable placeholder */
+[data-bs-theme="dark"] .form-control,
+[data-bs-theme="dark"] .form-select {
+    background-color: #26292f;
+    color: #dee2e6;
+    border-color: #3a3f46;
+}
+
+[data-bs-theme="dark"] .form-control::placeholder,
+[data-bs-theme="dark"] .form-select::placeholder {
+    color: #a8b0b9;
+    opacity: 1;
+}
+
+[data-bs-theme="dark"] .form-control:focus,
+[data-bs-theme="dark"] .form-select:focus {
+    background-color: #26292f;
+    color: #f1f3f5;
+    border-color: #4d545c;
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.30);
+}
+
+[data-bs-theme="dark"] .form-select option {
+    background-color: #26292f;
+    color: #dee2e6;
+}
+
+.form-label { color: #212529; margin-bottom: 4px; }
+
+[data-bs-theme="dark"] .form-label { color: #f1f3f5; }
+
+#create-student, #edit-student { min-height: 70vh; }
+
+/* ---------- Modal (delete confirm) — centered ---------- */
 .modal {
-  display: none; 
-  position: fixed;
-  top: 30%;
-  left: 30%;
-  width: 40%;
-  max-width: 400px;
-  padding: 0;
-  justify-content: center;
-  align-items: center;
-  z-index: 1050;
+    display: none;
+    position: fixed;
+    top: 28%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(420px, 92vw);
+    padding: 0;
+    z-index: 1050;
 }
 
 .modal-content {
-  background: #fff;
-  padding: 25px 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  text-align: center;
-  animation: fadeIn 0.3s ease-in-out;
+    background: #ffffff;
+    color: #212529;
+    padding: 24px 26px;
+    border-radius: 8px;
+    border: 1px solid #e0e2e6;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+    text-align: center;
+    animation: fadeIn 0.25s ease-in-out;
 }
+
+[data-bs-theme="dark"] .modal-content {
+    background: #1e2126;
+    color: #f1f3f5;
+    border-color: #2b2f36;
+}
+
+[data-bs-theme="dark"] .modal-content h3 { color: #f1f3f5; }
+
+.modal-content h3 { font-size: 1.02rem; color: #212529; }
 
 .modal-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 16px;
 }
-
-.btn-cancel {
-  background-color: #777;
-  color: white;
-  padding: 10px 15px;
-}
-
-.btn-cancel:hover { background-color: #555; }
-
-.btn-confirm {
-  background-color: #f44336;
-  color: white;
-  padding: 8px 12px;
-}
-
-.btn-confirm:hover { background-color: #f7291a; }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.9); }
-  to { opacity: 1; transform: scale(1); }
+    from { opacity: 0; transform: scale(0.97); }
+    to { opacity: 1; transform: scale(1); }
 }
 
-.search-filter-container {
-    display: flex;
-    gap: 10px;
-    justify-content: flex-end;
-    margin-bottom: 15px;
+/* ---------- Search / toolbar ---------- */
+.search-filter-container { gap: 10px; }
+
+#searchInput, #filterSelect { min-width: 170px; }
+
+/* ---------- Small helpers ---------- */
+.app-footer {
+    text-align: center;
+    color: #8d959e;
+    font-size: 0.85rem;
+    margin-top: 28px;
 }
 
-#searchInput, #filterSelect {
-    padding: 8px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-}
-.btn-purple {
-    background-color: #9C27B0;
-    color: white;
-}
-.btn-purple:hover {
-    background-color: #7B1FA2;
-}
+.app-footer a { color: #6c757d; }
+.app-footer a:hover { color: #495057; }
+
+.page-panel { max-width: 700px; }
+
+.text-muted-sm { color: #8d959e !important; }
+
+/* ---------- Alerts (bootstrap default look) ---------- */
 .alert {
     text-align: center;
     padding: 12px 20px;
     border-radius: 6px;
-    font-size: 1rem;
-    margin-bottom: 15px;
+    font-size: 0.95rem;
+    margin-bottom: 14px;
 }
-
-.alert-success { background-color: #00ec37; color: #155724; border: 1px solid #c3e6cb; }
-.alert-danger { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }

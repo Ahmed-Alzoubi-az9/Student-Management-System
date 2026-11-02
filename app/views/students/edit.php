@@ -23,21 +23,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Edit Student</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="/mid_level/Students_Manager_System/public/assets/css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../../public/assets/css/style.css">
   <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../public/assets/js/site.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../../../public/assets/js/script.js"></script>
 </head>
-<body class="bg-light">
+<body>
 
-<div class="container py-5">
-  <h1 class="text-center mb-4">Edit Student</h1>
+<?php include __DIR__ . '/../partials/navbar.php'; ?>
+
+<div class="container my-2 page-panel">
+  <h1>Edit Student</h1>
 
   <?php if (!empty($error)): ?>
     <div class="alert alert-danger"><?= htmlspecialchars($error) ?></div>
@@ -86,8 +90,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <textarea name="health_info" id="health_info" class="form-control" rows="3"><?= htmlspecialchars($student['health_info'] ?? '') ?></textarea>
       </div>
 
-      <div class="d-flex justify-content-between">
-        <button type="submit" class="btn btn-success">Update Student</button>
+      <div class="d-flex justify-content-between mt-4">
+        <button type="submit" class="btn btn-add">Update Student</button>
         <a href="../../../public/index.php" class="btn btn-secondary">Back</a>
       </div>
     </form>

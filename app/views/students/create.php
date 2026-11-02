@@ -20,21 +20,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Student</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../../../public/assets/css/style.css">
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="../../../public/assets/js/site.js"></script>
     <script src="../../../public/assets/js/script.js"></script>
 </head>
 
 <body>
-    <div class="container my-4">
-        <h1 class="text-center mb-4">Add New Student</h1>
+    <?php include __DIR__ . '/../partials/navbar.php'; ?>
+
+    <div class="container my-2 page-panel">
+        <h1>Add New Student</h1>
         <?php if ($error): ?>
             <div class="alert alert-danger alert-dismissible mx-auto" role="alert" style="max-width: 500px; text-align: center;">
                 <?= htmlspecialchars($error) ?>
@@ -61,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <input type="text" name="parent_number" class="form-control mb-3" placeholder="Parent Phone Number">
             <textarea name="health_info" class="form-control mb-3" rows="3" placeholder="Health Info"></textarea>
             <div class="d-flex flex-column align-items-center gap-2 mt-3">
-                <button type="submit" class="btn btn-success w-25">Add Student</button>
+                <button type="submit" class="btn btn-add w-25">Add Student</button>
                 <a href="../../../public/index.php" class="btn btn-secondary w-25">Back</a>
             </div>
 
